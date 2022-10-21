@@ -8,6 +8,7 @@
   --primary-black-color: #000000;
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --secondary-button-color: #f5f4fa;
+  --border-client: #afb1b8;
 }
 
 body {
@@ -89,12 +90,13 @@ img {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: var(--accent-color);
-  margin-right: 97px;
+
   display: flex;
 }
 
 .logo .logo-primary {
   color: var(--primary-black-color);
+  margin-right: 97px;
 }
 
 /* nav */
@@ -124,10 +126,18 @@ img {
   margin-left: auto;
 }
 
+.icon-nav {
+  fill: currentColor;
+  width: 16px;
+  max-height: 15px;
+  margin-right: 10px;
+}
+
 .contacts-mail,
 .contacts-tel {
   padding-top: 32px;
   padding-bottom: 32px;
+  display: flex;
 }
 .contacts-nav .item:not(:last-child) {
   margin-right: 15px;
@@ -152,6 +162,16 @@ img {
   background-color: var(--secondary-bg-color);
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
@@ -242,6 +262,20 @@ img {
   padding-bottom: 94px;
 }
 
+.features-icon {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 270px;
+  height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  justify-content: center;
+  background-color: var(--tertiary-bg-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 .features .item {
   flex-basis: calc((100%-90px) / 4);
 }
@@ -322,6 +356,84 @@ img {
   color: var(--secondary-text-color);
 }
 
+.social-icons-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 32px;
+  margin-top: 16px;
+}
+
+.social-media-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--primary-white-color);
+  padding: 12px 12px;
+  fill: var(--border-client);
+  gap: 10px;
+}
+
+.social-media-link:hover,
+.social-media-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+
+.social-media-icon {
+  height: 20px;
+  width: 20px;
+}
+
+/* Clients */
+
+.client-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  display: flex;
+  text-align: center;
+}
+
+.client-list {
+  display: flex;
+}
+.client-list .item {
+  width: calc((100% - 150px) / 6);
+}
+.client-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+
+  color: var(--border-client);
+
+  border: 1px solid var(--border-client);
+  border-radius: 4px;
+}
+.client-link:hover,
+.client-link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.icon-client {
+  fill: currentColor;
+  max-width: 86px;
+  max-height: 50px;
+}
+
+.icon-client:hover,
+.icon-client:focus {
+  fill: currentColor;
+}
+
 /* Footer */
 
 .page-footer {
@@ -330,12 +442,29 @@ img {
   padding-bottom: 60px;
 }
 
-.logo .logo-secondary {
+.container-footer {
+  display: flex;
+}
+
+.address-footer {
+  display: block;
+  margin-right: 70px;
+}
+
+.container-footer .logo {
+  display: inline-block;
   margin-bottom: 20px;
+}
+
+.logo .logo-secondary {
   color: var(--primary-white-color);
 }
 
 /* address */
+
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 
 .address .link {
   font-style: normal;
@@ -343,12 +472,51 @@ img {
   color: var(--footer-text-color);
 }
 
-.address-item:not(:last-child) {
-  margin-bottom: 9px;
+.contacts-footer .address-location {
+  color: var(--primary-white-color);
+  text-decoration: none;
+  font-style: normal;
 }
 
-.address .address-location {
+/* Social pages */
+
+.footer-join {
+  padding-top: 12px;
+}
+
+.footer-offer {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
   color: var(--primary-white-color);
+  margin-bottom: 20px;
+  display: block;
+}
+.footer-soclink {
+  display: flex;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-white-color);
+  border-radius: 50%;
+}
+.social-link:hover,
+.social-link:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+.footer-soclink .item:not(:last-child) {
+  margin-right: 11px;
+}
+.footer-social-link {
+  display: block;
+  fill: currentColor;
 }
 
 /* Portfolio page */
