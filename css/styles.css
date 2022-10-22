@@ -138,6 +138,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   display: flex;
+  align-items: center;
 }
 .contacts-nav .item:not(:last-child) {
   margin-right: 15px;
@@ -172,6 +173,8 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -262,18 +265,23 @@ img {
   padding-bottom: 94px;
 }
 
-.features-icon {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
+.features-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  justify-content: center;
   background-color: var(--tertiary-bg-color);
-  border-radius: 4px;
   margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.features-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .features .item {
@@ -371,7 +379,6 @@ img {
   height: 44px;
   border-radius: 50%;
   color: var(--primary-white-color);
-  padding: 12px 12px;
   fill: var(--border-client);
   gap: 10px;
 }
@@ -444,6 +451,7 @@ img {
 
 .container-footer {
   display: flex;
+  align-items: baseline;
 }
 
 .address-footer {
@@ -479,10 +487,6 @@ img {
 }
 
 /* Social pages */
-
-.footer-join {
-  padding-top: 12px;
-}
 
 .footer-offer {
   font-weight: 700;
